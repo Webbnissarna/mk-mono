@@ -19,11 +19,14 @@ const theme: Theme = {
     body: 400,
     stylish: 300,
   },
-  space: [0, 2, 5, 10],
+  space: [0, 2, 5, 10, 20],
+  radii: [0, 2, 5],
 
   colors: {
     background: "#1e1e1e",
     banner: "#fff",
+    body: "#fff",
+    lightHover: "rgba(255, 255, 255, 0.2)",
   },
 
   shadows: {
