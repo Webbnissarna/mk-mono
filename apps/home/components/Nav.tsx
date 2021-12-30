@@ -5,6 +5,7 @@ const navLinkStyle: ThemeUIStyleObject = {
   fontFamily: "body",
   fontWeight: "stylish",
   fontSize: "medium",
+  textShadow: "link",
   px: 4,
   py: 2,
   borderRadius: 1,

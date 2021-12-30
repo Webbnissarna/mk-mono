@@ -8,12 +8,26 @@ export default function BannerPair(): JSX.Element {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gridGap: 3,
+        gap: 3,
         transform: "rotate(20deg)",
       }}
     >
-      <Banner text="MASTER" />
-      <Banner text="KENTH" right />
+      <Box
+        sx={{
+          position: "relative",
+          right: "5vw",
+        }}
+      >
+        <Banner text="MASTER" />
+      </Box>
+      <Box
+        sx={{
+          position: "relative",
+          left: "5vw",
+        }}
+      >
+        <Banner text="KENTH" right />
+      </Box>
     </Box>
   );
 }

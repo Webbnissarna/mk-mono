@@ -31,6 +31,7 @@ const theme: Theme = {
 
   shadows: {
     heading: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    link: "2px 2px 2px rgba(0, 0, 0, 0.25)",
   },
 };
 

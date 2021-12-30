@@ -4,7 +4,7 @@ import Nav from "../components/Nav";
 
 export default function Index() {
   return (
-    <Box sx={{ overflowX: "hidden", width: "100vw" }}>
+    <Box sx={{ overflowX: "hidden", maxWidth: "100vw" }}>
       <Box
         sx={{
           height: "100vh",
