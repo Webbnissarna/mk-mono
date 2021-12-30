@@ -1,8 +1,10 @@
-export default function Home() {
+import { Box } from "theme-ui";
+import BannerPair from "../components/BannerPair";
+
+export default function Index() {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Hello</p>
-    </div>
+    <Box sx={{ overflowX: "hidden", width: "100vw", minHeight: "100vh" }}>
+      <BannerPair />
+    </Box>
   );
 }
