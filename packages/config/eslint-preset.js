@@ -9,7 +9,7 @@ module.exports = {
     "plugin:jest/style",
     "prettier",
   ],
-  plugins: ["jest"],
+  plugins: ["unused-imports", "jest"],
   env: {
     es2021: true,
     node: true,
@@ -30,6 +30,17 @@ module.exports = {
       2,
       {
         namedComponents: "function-declaration",
+      },
+    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
       },
     ],
   },
