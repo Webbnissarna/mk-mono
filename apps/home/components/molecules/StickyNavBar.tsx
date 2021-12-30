@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Flex } from "theme-ui";
-import { CustomThemeType } from "../utils/theme";
-import Nav from "./Nav";
+import { CustomThemeType } from "../../utils/theme";
+import Nav from "../atoms/Nav";
 
 export default function StickyNavBar(): JSX.Element {
   const [isStuck, setIsStuck] = useState(false);

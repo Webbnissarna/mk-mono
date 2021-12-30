@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Box, Flex } from "theme-ui";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../atoms/SectionTitle";
 
 interface SectionProps {
   title: string;

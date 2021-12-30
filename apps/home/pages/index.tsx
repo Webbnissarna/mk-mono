@@ -1,7 +1,7 @@
 import { Box, Flex } from "theme-ui";
-import BannerPair from "../components/BannerPair";
-import Section from "../components/Section";
-import StickyNavBar from "../components/StickyNavBar";
+import BannerPair from "../components/molecules/BannerPair";
+import Section from "../components/molecules/Section";
+import StickyNavBar from "../components/molecules/StickyNavBar";
 
 import { CustomThemeType } from "../utils/theme";
 

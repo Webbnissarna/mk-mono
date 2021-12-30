@@ -1,5 +1,5 @@
 import { Box } from "theme-ui";
-import Banner from "./Banner";
+import Banner from "../atoms/Banner";
 
 export default function BannerPair(): JSX.Element {
   return (
