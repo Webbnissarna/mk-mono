@@ -1,14 +1,16 @@
 import { Box, Flex } from "theme-ui";
 import BannerPair from "../components/BannerPair";
-import Nav from "../components/Nav";
 import Section from "../components/Section";
+import StickyNavBar from "../components/StickyNavBar";
+
+import { CustomThemeType } from "../utils/theme";
 
 export default function Index() {
   return (
-    <Box sx={{ overflowX: "hidden", maxWidth: "100vw" }}>
+    <Box sx={{ maxWidth: "100vw" }}>
       <Box
         sx={{
-          height: "100vh",
+          height: "80vh",
           position: "relative",
           overflow: "hidden",
         }}
@@ -24,20 +26,15 @@ export default function Index() {
         >
           <BannerPair />
         </Box>
-        <Flex
-          sx={{
-            position: "absolute",
-            bottom: "20vh",
-            width: "100%",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 4,
-          }}
-        >
-          <Nav />
-          <Box sx={{ width: "30px", height: "30px" }}></Box>
-        </Flex>
       </Box>
+
+      <StickyNavBar />
+      <Box
+        sx={{
+          height: (theme: CustomThemeType) =>
+            `calc(20vh - ${theme.lineHeights.nav})`,
+        }}
+      />
       <Flex
         sx={{
           flexDirection: "column",

@@ -1,6 +1,8 @@
 import { Theme } from "theme-ui";
 
-const theme: Theme = {
+const makeTheme = <T extends Theme>(t: T) => t;
+
+const theme = makeTheme({
   fonts: {
     body: "'Nunito', sans-serif;",
     heading: "'Raleway', sans-serif;",
@@ -12,6 +14,9 @@ const theme: Theme = {
     medium: 24,
     title: 48,
     heading: 96,
+  },
+  lineHeights: {
+    nav: "38px",
   },
   fontWeights: {
     heading: 900,
@@ -34,6 +39,8 @@ const theme: Theme = {
     link: "2px 2px 2px rgba(0, 0, 0, 0.25)",
     title: "2px 4px 2px rgba(0, 0, 0, 0.5);",
   },
-};
+});
 
 export default theme;
+
+export type CustomThemeType = typeof theme;
