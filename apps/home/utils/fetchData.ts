@@ -1,5 +1,9 @@
 import { gql, GraphQLClient } from "graphql-request";
 
+export interface GQLQueryResponse<T> {
+  data: T;
+}
+
 export interface FetchOptions {
   query: string;
   variables?: Record<string, unknown>;

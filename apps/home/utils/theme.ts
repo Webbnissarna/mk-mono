@@ -24,7 +24,7 @@ const theme = makeTheme({
     body: 400,
     stylish: 300,
   },
-  space: [0, 2, 5, 10, 20],
+  space: [0, 2, 5, 10, 20, 40],
   radii: [0, 2, 5],
 
   colors: {

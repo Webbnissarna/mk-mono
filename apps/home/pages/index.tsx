@@ -2,11 +2,16 @@ import { gql } from "graphql-request";
 import { Box } from "theme-ui";
 import ContentContainer from "../components/organisms/ContentContainer";
 import TopScreen from "../components/organisms/TopScreen";
-import { Game, GQLQueryResponse } from "../types/Game";
-import fetchData, { responsiveImageFragment } from "../utils/fetchData";
+import { Game } from "../types/Game";
+import { WebApp } from "../types/WebApp";
+import fetchData, {
+  GQLQueryResponse,
+  responsiveImageFragment,
+} from "../utils/fetchData";
 
 interface PageData {
   allGames: Game[];
+  allWebApps: WebApp[];
 }
 
 type PageProps = GQLQueryResponse<PageData>;
@@ -15,7 +20,7 @@ export default function Index({ data }: PageProps) {
   return (
     <Box sx={{ maxWidth: "100vw" }}>
       <TopScreen />
-      <ContentContainer games={data.allGames} />
+      <ContentContainer games={data.allGames} webApps={data.allWebApps} />
     </Box>
   );
 }
@@ -31,6 +36,15 @@ const query = gql`
         ) {
           ...responsiveImageFragment
         }
+      }
+    }
+
+    allWebApps(orderBy: title_ASC) {
+      title
+      abbreviation
+      description
+      color {
+        hex
       }
     }
   }

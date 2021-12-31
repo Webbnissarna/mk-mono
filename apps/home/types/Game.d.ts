@@ -9,7 +9,3 @@ interface _Game {
 }
 
 export type Game = Partial<_Game>;
-
-export interface GQLQueryResponse<T> {
-  data: T;
-}

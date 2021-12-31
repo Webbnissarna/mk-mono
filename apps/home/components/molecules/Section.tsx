@@ -19,7 +19,7 @@ export default function Section({
       }}
     >
       <SectionTitle>{title}</SectionTitle>
-      <Box>{children}</Box>
+      <Box sx={{ width: "100%" }}>{children}</Box>
     </Flex>
   );
 }
