@@ -45,6 +45,10 @@ const theme = makeTheme({
 
   styles: {
     root: {
+      scrollBehavior: "smooth",
+      padding: 0,
+      margin: 0,
+
       a: {
         color: "link",
       },

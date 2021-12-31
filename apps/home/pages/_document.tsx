@@ -16,13 +16,6 @@ export default function Document() {
         />
       </Head>
       <body>
-        <style jsx global>{`
-          body,
-          html {
-            padding: 0;
-            margin: 0;
-          }
-        `}</style>
         <Main />
         <NextScript />
       </body>

@@ -32,15 +32,15 @@ export default function ContentContainer({
           gap: 5,
         }}
       >
-        <Section title="Games">
+        <Section id="games" title="Games">
           <GamesDisplay games={games} />
         </Section>
 
-        <Section title="Web Apps">
+        <Section id="webapps" title="Web Apps">
           <WebAppsDisplay webApps={webApps} />
         </Section>
 
-        <Section title="Me">
+        <Section id="me" title="Me">
           <AboutMeDisplay me={me} />
         </Section>
 

@@ -3,11 +3,13 @@ import { Box, Flex } from "theme-ui";
 import SectionTitle from "../atoms/SectionTitle";
 
 interface SectionProps {
+  id: string;
   title: string;
   children: ReactNode | ReactNode[];
 }
 
 export default function Section({
+  id,
   title,
   children,
 }: SectionProps): JSX.Element {
@@ -19,7 +21,7 @@ export default function Section({
         gap: 4,
       }}
     >
-      <SectionTitle>{title}</SectionTitle>
+      <SectionTitle id={id}>{title}</SectionTitle>
       <Box sx={{ width: "100%" }}>{children}</Box>
     </Flex>
   );
