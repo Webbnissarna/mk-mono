@@ -43,6 +43,16 @@ module.exports = {
         argsIgnorePattern: "^_",
       },
     ],
+    "jsx-a11y/alt-text": [
+      2,
+      {
+        elements: ["img", "object", "area", 'input[type="image"]'],
+        img: [],
+        object: ["Object"],
+        area: ["Area"],
+        'input[type="image"]': ["InputImage"],
+      },
+    ],
   },
   overrides: [
     {
