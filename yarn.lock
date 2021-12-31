@@ -411,6 +411,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.12.5":
+  version: 7.16.7
+  resolution: "@babel/runtime@npm:7.16.7"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 47912f0aaacd1cab2e2552aaf3e6eaffbcaf2d5ac9b07a89a12ac0d42029cb92c070b0d16f825e4277c4a34677c54d8ffe85e1f7c6feb57de58f700eec67ce2f
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.7.2":
   version: 7.16.5
   resolution: "@babel/runtime@npm:7.16.5"
@@ -2019,6 +2028,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-flatten@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "array-flatten@npm:3.0.0"
+  checksum: ad00c51ca70cf837501fb6da823ba39bc6a86b43d0b76d840daa02fe0f8e68e94ad5bc2d0d038053118b879aaca8ea6168c32c7387a2fa5b118ad28db4f1f863
+  languageName: node
+  linkType: hard
+
 "array-includes@npm:^3.1.3, array-includes@npm:^3.1.4":
   version: 3.1.4
   resolution: "array-includes@npm:3.1.4"
@@ -2901,6 +2917,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cross-fetch@npm:^3.0.6":
+  version: 3.1.4
+  resolution: "cross-fetch@npm:3.1.4"
+  dependencies:
+    node-fetch: 2.6.1
+  checksum: 2107e5e633aa327bdacab036b1907c7ddd28651ede0c1d4fd14db04510944d56849a8255e2f5b8f9a1da0e061b6cee943f6819fe29ed9a130195e7fadd82a4ff
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -3047,6 +3072,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"datocms-listen@npm:^0.1.6":
+  version: 0.1.7
+  resolution: "datocms-listen@npm:0.1.7"
+  checksum: 3e6970b81d39699b1df5cefc79e39dca949fbf8ea2cace047afb97f5598ec76cbf4bf79791a3086f4048404f839eb85b5adabd0f735d426dd69bf6310fb10170
+  languageName: node
+  linkType: hard
+
+"datocms-structured-text-generic-html-renderer@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "datocms-structured-text-generic-html-renderer@npm:1.2.0"
+  dependencies:
+    datocms-structured-text-utils: ^1.2.0
+  checksum: b1f1b51266a25c8dc933bf5346696dd4d395f8f986bb424b51d497f9ea73492b990167bdd5fe8a42a82e7f7cbb80d1f4d067f4c279251762b4f22a815917f2c5
+  languageName: node
+  linkType: hard
+
+"datocms-structured-text-utils@npm:^1.1.0, datocms-structured-text-utils@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "datocms-structured-text-utils@npm:1.2.0"
+  dependencies:
+    array-flatten: ^3.0.0
+  checksum: 534428496a8130af40da57b784038f9df3a295b91c9db5f9452b33ce1206f0dcc6ac9b25a0f6e2bda188489e8dcc00c2005f207a4743abb08cf926a265c1d996
+  languageName: node
+  linkType: hard
+
 "debug@npm:2, debug@npm:^2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -3132,6 +3182,13 @@ __metadata:
   version: 1.1.2
   resolution: "depd@npm:1.1.2"
   checksum: 6b406620d269619852885ce15965272b829df6f409724415e0002c8632ab6a8c0a08ec1f0bd2add05dc7bd7507606f7e2cc034fa24224ab829580040b835ecd9
+  languageName: node
+  linkType: hard
+
+"dequal@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "dequal@npm:2.0.2"
+  checksum: 86c7a2c59f7b0797ed397c74b5fcdb744e48fc19440b70ad6ac59f57550a96b0faef3f1cfd5760ec5e6d3f7cb101f634f1f80db4e727b1dc8389bf62d977c0a0
   languageName: node
   linkType: hard
 
@@ -3868,6 +3925,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"extract-files@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "extract-files@npm:9.0.0"
+  checksum: c31781d090f8d8f62cc541f1023b39ea863f24bd6fb3d4011922d71cbded70cef8191f2b70b43ec6cb5c5907cdad1dc5e9f29f78228936c10adc239091d8ab64
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
@@ -4304,6 +4368,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql-request@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "graphql-request@npm:3.7.0"
+  dependencies:
+    cross-fetch: ^3.0.6
+    extract-files: ^9.0.0
+    form-data: ^3.0.0
+  peerDependencies:
+    graphql: 14 - 16
+  checksum: db3800cc4ee884cd1514d7d5eafafb9ed27694278fdddd7402345754a7d25e7d713246c72aa510b439b6df2633b74f2cf74fb36864a22a857d5fb2de1cf0b4d8
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^16.2.0":
+  version: 16.2.0
+  resolution: "graphql@npm:16.2.0"
+  checksum: 204b5c9991b82561651a28b13dbb2e0e67514171a6a8c045ca4a527b944087344a14519d0426d661b49f2305584b390591abadc82b942f7b65e64e05cb31a584
+  languageName: node
+  linkType: hard
+
 "has-bigints@npm:^1.0.1":
   version: 1.0.1
   resolution: "has-bigints@npm:1.0.1"
@@ -4642,6 +4726,13 @@ __metadata:
     has: ^1.0.3
     side-channel: ^1.0.4
   checksum: 1944f92e981e47aebc98a88ff0db579fd90543d937806104d0b96557b10c1f170c51fb777b97740a8b6ddeec585fca8c39ae99fd08a8e058dfc8ab70937238bf
+  languageName: node
+  linkType: hard
+
+"intersection-observer@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "intersection-observer@npm:0.12.0"
+  checksum: 96d2f3ea4995b7b429b79646467c975230cfbe3ede7fb08d0c022cfe6ee0c89dfa98aa4377e8b5f7bee880322eb118e6c0275607a53043f9c50921da8363c1e8
   languageName: node
   linkType: hard
 
@@ -6844,6 +6935,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-datocms@npm:^1.6.8":
+  version: 1.6.8
+  resolution: "react-datocms@npm:1.6.8"
+  dependencies:
+    datocms-listen: ^0.1.6
+    datocms-structured-text-generic-html-renderer: ^1.1.0
+    datocms-structured-text-utils: ^1.1.0
+    intersection-observer: ^0.12.0
+    react-intersection-observer: ^8.31.1
+    use-deep-compare-effect: ^1.6.1
+  peerDependencies:
+    react: ">= 16.12.0"
+  checksum: 390c79e3c2f36abfe49b2bae369ec3c4d9ed873c9d0c0aa77c5d91eb9d48aff8eb968e2dbfe895cf930d2be0ccd516b052219c8bfc645ada0b4e7071ee9205c4
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -6854,6 +6961,15 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-intersection-observer@npm:^8.31.1":
+  version: 8.33.1
+  resolution: "react-intersection-observer@npm:8.33.1"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
+  checksum: 5feb0df01dd64f1fa0b8300fb4fc12db95350c1ae2514f66f0652371f65e5501758a662746000dc2584d24dcce07139590e5375d6c9920a60b282af83468d0c4
   languageName: node
   linkType: hard
 
@@ -8084,6 +8200,18 @@ turbo@latest:
   languageName: node
   linkType: hard
 
+"use-deep-compare-effect@npm:^1.6.1":
+  version: 1.8.1
+  resolution: "use-deep-compare-effect@npm:1.8.1"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    dequal: ^2.0.2
+  peerDependencies:
+    react: ">=16.13"
+  checksum: 2b9b6291df3f772f44d259b352e5d998963ccee0db2efeb76bb05525d928064aeeb69bb0dee5a5e428fea7cf3db67c097a770ebd30caa080662b565f6ef02b2e
+  languageName: node
+  linkType: hard
+
 "use-subscription@npm:1.5.1":
   version: 1.5.1
   resolution: "use-subscription@npm:1.5.1"
@@ -8188,10 +8316,13 @@ turbo@latest:
     "@types/react": 17.0.37
     config: "*"
     eslint: 7.32.0
+    graphql: ^16.2.0
+    graphql-request: ^3.7.0
     jest: ^27.4.5
     next: 12.0.3
     next-transpile-modules: 9.0.0
     react: 17.0.2
+    react-datocms: ^1.6.8
     react-dom: 17.0.2
     theme-ui: ^0.13.0
     tsconfig: "*"
