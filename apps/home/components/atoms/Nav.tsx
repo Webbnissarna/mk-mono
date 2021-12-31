@@ -25,12 +25,6 @@ export default function Nav(): JSX.Element {
       <NavLink sx={navLinkStyle} href="#webapps">
         Web Apps
       </NavLink>
-      <NavLink sx={navLinkStyle} href="#art">
-        Art
-      </NavLink>
-      <NavLink sx={navLinkStyle} href="#skilltree">
-        Skill Tree
-      </NavLink>
       <NavLink sx={navLinkStyle} href="#me">
         Me
       </NavLink>
