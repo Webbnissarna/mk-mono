@@ -7,14 +7,14 @@ export interface GQLQueryResponse<T> {
 export interface FetchOptions {
   query: string;
   variables?: Record<string, unknown>;
-  preview?: boolean;
 }
 
 export default async function fetchData<T>({
   query,
   variables,
-  preview,
 }: FetchOptions): Promise<T> {
+  const preview = !!process.env.DATOCMS_USE_PREVIEW;
+
   const endpoint = preview
     ? `https://graphql.datocms.com/preview`
     : `https://graphql.datocms.com/`;
