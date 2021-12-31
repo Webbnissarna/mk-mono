@@ -16,6 +16,7 @@ export default function Section({
       sx={{
         flexDirection: "column",
         alignItems: "center",
+        gap: 4,
       }}
     >
       <SectionTitle>{title}</SectionTitle>

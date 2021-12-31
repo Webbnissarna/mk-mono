@@ -3,6 +3,7 @@ import { Box } from "theme-ui";
 import ContentContainer from "../components/organisms/ContentContainer";
 import TopScreen from "../components/organisms/TopScreen";
 import { Game } from "../types/Game";
+import { Me } from "../types/Me";
 import { WebApp } from "../types/WebApp";
 import fetchData, {
   GQLQueryResponse,
@@ -12,6 +13,7 @@ import fetchData, {
 interface PageData {
   allGames: Game[];
   allWebApps: WebApp[];
+  me: Me;
 }
 
 type PageProps = GQLQueryResponse<PageData>;
@@ -20,7 +22,11 @@ export default function Index({ data }: PageProps) {
   return (
     <Box sx={{ maxWidth: "100vw" }}>
       <TopScreen />
-      <ContentContainer games={data.allGames} webApps={data.allWebApps} />
+      <ContentContainer
+        games={data.allGames}
+        webApps={data.allWebApps}
+        me={data.me}
+      />
     </Box>
   );
 }
@@ -45,6 +51,19 @@ const query = gql`
       description
       color {
         hex
+      }
+    }
+
+    me {
+      image {
+        responsiveImage(
+          imgixParams: { fit: crop, w: "280", h: "280", auto: format }
+        ) {
+          ...responsiveImageFragment
+        }
+      }
+      content {
+        value
       }
     }
   }
