@@ -1,9 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import { Flex } from "theme-ui";
+import { Flex, Link } from "theme-ui";
 import { CustomThemeType } from "../../utils/theme";
 import Nav from "../atoms/Nav";
+import GithubIcon from "../../images/github-icon.svg";
+import Image from "next/image";
 
-export default function StickyNavBar(): JSX.Element {
+interface StickyNavBarProps {
+  githubLink: string;
+}
+
+export default function StickyNavBar({
+  githubLink,
+}: StickyNavBarProps): JSX.Element {
   const [isStuck, setIsStuck] = useState(false);
   const stickyRoot = useRef<HTMLDivElement>(null);
 
@@ -26,19 +34,49 @@ export default function StickyNavBar(): JSX.Element {
     <Flex
       ref={stickyRoot}
       sx={{
+        flexDirection: "column",
+        gap: 4,
+        alignItems: "center",
+        width: "100%",
         position: "sticky",
         top: "-1px",
-        paddingTop: (theme: CustomThemeType) =>
-          `calc(${theme.space[2]}px + 1px)`,
-        paddingBottom: 2,
-        justifyContent: "center",
         zIndex: 1,
-
-        transition: "background-color 0.1s ease-out",
-        backgroundColor: isStuck ? "rgba(0, 0, 0, 0.9)" : "transparent",
       }}
     >
-      <Nav />
+      <Flex
+        sx={{
+          width: "100%",
+          paddingBottom: 2,
+          justifyContent: "center",
+          paddingTop: (theme: CustomThemeType) =>
+            `calc(${theme.space[2]}px + 1px)`,
+
+          transition: "background-color 0.1s ease-out",
+          backgroundColor: isStuck ? "rgba(0, 0, 0, 0.9)" : "transparent",
+        }}
+      >
+        <Nav />
+      </Flex>
+
+      <Link
+        href={githubLink}
+        sx={{
+          opacity: isStuck ? 0 : 0.8,
+          transition: "opacity 0.1s ease-out",
+
+          "&:hover": {
+            opacity: 1,
+          },
+        }}
+      >
+        <Image
+          src={GithubIcon}
+          title="GitHub logo"
+          alt="Negative space silhouette depicting a cat with an octopus tentacle as arm."
+          width={32}
+          height={32}
+        />
+      </Link>
     </Flex>
   );
 }

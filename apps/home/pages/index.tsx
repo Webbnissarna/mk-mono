@@ -4,6 +4,7 @@ import ContentContainer from "../components/organisms/ContentContainer";
 import TopScreen from "../components/organisms/TopScreen";
 import { Game } from "../types/Game";
 import { Me } from "../types/Me";
+import { SiteMetainfo } from "../types/SiteMetainfo";
 import { WebApp } from "../types/WebApp";
 import fetchData, {
   GQLQueryResponse,
@@ -11,6 +12,7 @@ import fetchData, {
 } from "../utils/fetchData";
 
 interface PageData {
+  siteMetainfo: SiteMetainfo;
   allGames: Game[];
   allWebApps: WebApp[];
   me: Me;
@@ -21,7 +23,7 @@ type PageProps = GQLQueryResponse<PageData>;
 export default function Index({ data }: PageProps) {
   return (
     <Box sx={{ maxWidth: "100vw" }}>
-      <TopScreen />
+      <TopScreen githubLink={data.siteMetainfo.githubLink} />
       <ContentContainer
         games={data.allGames}
         webApps={data.allWebApps}
@@ -33,6 +35,10 @@ export default function Index({ data }: PageProps) {
 
 const query = gql`
   query MyQuery {
+    siteMetainfo {
+      githubLink
+    }
+
     allGames(orderBy: order_ASC) {
       title
       tags

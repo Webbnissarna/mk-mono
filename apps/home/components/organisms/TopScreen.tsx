@@ -3,7 +3,11 @@ import { CustomThemeType } from "../../utils/theme";
 import BannerPair from "../molecules/BannerPair";
 import StickyNavBar from "../molecules/StickyNavBar";
 
-export default function TopScreen(): JSX.Element {
+interface TopScreenProps {
+  githubLink: string;
+}
+
+export default function TopScreen({ githubLink }: TopScreenProps): JSX.Element {
   return (
     <>
       <Box
@@ -26,7 +30,7 @@ export default function TopScreen(): JSX.Element {
         </Box>
       </Box>
 
-      <StickyNavBar />
+      <StickyNavBar githubLink={githubLink} />
       <Box
         sx={{
           height: (theme: CustomThemeType) =>
