@@ -10,6 +10,7 @@ import fetchData, {
   GQLQueryResponse,
   responsiveImageFragment,
 } from "../utils/fetchData";
+import Background from "../components/organisms/Background";
 
 interface PageData {
   siteMetainfo: SiteMetainfo;
@@ -24,6 +25,7 @@ export default function Index({ data }: PageProps) {
   return (
     <Box sx={{ maxWidth: "100vw" }}>
       <TopScreen githubLink={data.siteMetainfo.githubLink} />
+      <Background image={data.siteMetainfo.background.responsiveImage} />
       <ContentContainer
         games={data.allGames}
         webApps={data.allWebApps}
@@ -37,6 +39,11 @@ const query = gql`
   query MyQuery {
     siteMetainfo {
       githubLink
+      background {
+        responsiveImage(imgixParams: { auto: format }) {
+          ...responsiveImageFragment
+        }
+      }
     }
 
     allGames(orderBy: order_ASC) {
