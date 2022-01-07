@@ -28,6 +28,7 @@ export default function SectionTitle({
           fontFamily: "body",
           fontWeight: "title",
           fontSize: "title",
+          textShadow: "title",
         }}
       >
         {children}

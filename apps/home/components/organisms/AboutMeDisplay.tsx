@@ -38,6 +38,7 @@ export default function AboutMeDisplay({
           fontFamily: "body",
           fontSize: "body",
           fontWeight: "body",
+          textAlign: "center",
         }}
       >
         <StructuredText data={me.content} />
