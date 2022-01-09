@@ -14,7 +14,7 @@ export default function Background({ image }: BackgroundProps): JSX.Element {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "red",
+        backgroundColor: "background",
         zIndex: -1,
         display: "flex",
         justifyContent: "center",
