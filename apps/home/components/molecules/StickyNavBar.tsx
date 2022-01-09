@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Flex, Link } from "theme-ui";
 import { CustomThemeType } from "../../utils/theme";
 import Nav from "../atoms/Nav";
-import GithubIcon from "../../images/github-icon.svg";
-import Image from "next/image";
+import Icon from "../atoms/Icon";
 
 interface StickyNavBarProps {
   githubLink: string;
@@ -69,13 +68,7 @@ export default function StickyNavBar({
           },
         }}
       >
-        <Image
-          src={GithubIcon}
-          title="GitHub logo"
-          alt="Negative space silhouette depicting a cat with an octopus tentacle as arm."
-          width={32}
-          height={32}
-        />
+        <Icon type="github" />
       </Link>
     </Flex>
   );
