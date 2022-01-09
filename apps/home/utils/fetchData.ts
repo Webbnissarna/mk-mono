@@ -1,4 +1,24 @@
 import { gql, GraphQLClient } from "graphql-request";
+import {
+  ResponsiveImageType,
+  StructuredTextGraphQlResponseRecord,
+} from "react-datocms";
+
+export interface Video {
+  provider: string;
+  providerUid: string;
+  title: string;
+  thumbnailUrl: string;
+  url: string;
+  width: number;
+  height: number;
+}
+export interface StructuredTextBlock
+  extends StructuredTextGraphQlResponseRecord {
+  image?: {
+    responsiveImage: ResponsiveImageType;
+  };
+}
 
 export interface GQLQueryResponse<T> {
   data: T;

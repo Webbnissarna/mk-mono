@@ -31,6 +31,7 @@ const theme = makeTheme({
     background: "#1e1e1e",
     banner: "#fff",
     body: "#fff",
+    dark: "#1e1e1e",
     lightHover: "rgba(255, 255, 255, 0.2)",
     card: "rgba(17, 17, 17, 0.9)",
     link: "#0085ff",
@@ -51,6 +52,22 @@ const theme = makeTheme({
 
       a: {
         color: "link",
+      },
+
+      h1: {
+        fontFamily: "heading",
+      },
+
+      h2: {
+        fontFamily: "heading",
+      },
+
+      h3: {
+        fontFamily: "heading",
+      },
+
+      h4: {
+        fontFamily: "heading",
       },
     },
   },
