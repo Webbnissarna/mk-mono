@@ -11,6 +11,7 @@ const theme = makeTheme({
   fontSizes: {
     small: 12,
     body: 14,
+    button: 18,
     medium: 24,
     title: 48,
     heading: 96,
@@ -25,13 +26,14 @@ const theme = makeTheme({
     stylish: 300,
   },
   space: [0, 2, 5, 10, 20, 40],
-  radii: [0, 2, 5],
+  radii: [0, 2, 5, 8],
 
   colors: {
     background: "#1e1e1e",
     banner: "#fff",
     body: "#fff",
     dark: "#1e1e1e",
+    light: "#fff",
     lightHover: "rgba(255, 255, 255, 0.2)",
     card: "rgba(17, 17, 17, 0.9)",
     link: "#0085ff",

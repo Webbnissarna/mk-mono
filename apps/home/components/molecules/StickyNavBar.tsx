@@ -68,7 +68,7 @@ export default function StickyNavBar({
           },
         }}
       >
-        <Icon type="github" />
+        <Icon type="github" size={32} />
       </Link>
     </Flex>
   );

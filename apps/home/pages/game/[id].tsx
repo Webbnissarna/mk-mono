@@ -8,6 +8,8 @@ import Background from "../../components/organisms/Background";
 import { SiteMetainfo } from "../../types/SiteMetainfo";
 import VideoPlayer from "../../components/atoms/VideoPlayer";
 import StructuredTextRenderer from "../../components/atoms/StructuredTextRenderer";
+import FancyButtonList from "../../components/molecules/FancyButtonList";
+import { IconButtonProps } from "../../components/molecules/IconButton";
 
 interface GamePageProps {
   game: Game;
@@ -18,6 +20,13 @@ export default function GamePage({
   game,
   siteMetainfo,
 }: GamePageProps): JSX.Element {
+  const linkButtons = game.links?.map<IconButtonProps>((link) => ({
+    type: link.type,
+    onClick: () => window?.open(link.url),
+  }));
+
+  console.log("linkButtons", linkButtons);
+
   return (
     <Box sx={{ maxWidth: "100vw" }}>
       <Background image={siteMetainfo.background.responsiveImage} />
@@ -63,6 +72,7 @@ export default function GamePage({
             <Paragraph>{game.description}</Paragraph>
           </Flex>
           {game.promoVideo && <VideoPlayer video={game.promoVideo} />}
+          {linkButtons && <FancyButtonList buttons={linkButtons} />}
           <Box
             sx={{
               color: "dark",
@@ -109,6 +119,7 @@ function makePropsQuery(slug: string) {
       slug
       releaseDate
       tags
+      links
       promoVideo {
         provider
         title

@@ -2,8 +2,14 @@ import {
   ResponsiveImageType,
   StructuredTextGraphQlResponse,
 } from "react-datocms";
+import { IconType } from "../components/atoms/Icon";
 
 import { Video, StructuredTextBlock } from "../utils/fetchData";
+
+export interface ExternalLink {
+  type: IconType;
+  url: string;
+}
 
 interface _Game {
   title: string;
@@ -17,6 +23,7 @@ interface _Game {
   description: string;
   promoVideo: Video;
   screenshots: { responsiveImage: ResponsiveImageType }[];
+  links: ExternalLink[];
   content: StructuredTextGraphQlResponse<StructuredTextBlock>;
 }
 
